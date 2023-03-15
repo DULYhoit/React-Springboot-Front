@@ -5,9 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(234, 230, 230);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Navbar-login{
+  font-weight: 600;
+}
+.LoginForm-container{
+  width: 400px;
+  margin: 100px auto;
+}
+.LoginBtn-container Button{
+  margin-left: 10px;
+}
+.notice-container{
+  width: 80%;
+  margin: 0 auto;
+}
+.notice-container h1{
+  margin: 100px auto;
+  text-align: center;
+}
+.notice-span{
+  font-weight: 100;
+}
+.logout-btn{
+  margin-left: 30px;
+}
+
+  .pagenation-btn{
+  background: white;
+} 
+.inputgroup-container{
+  margin: 30px auto;
+ 
+  width: 1000px;
+  height: 1000px;
+}
+  .inputgroup-container>*{
+    margin: 50px auto;
+    width: 400px;
+  }
+   
+
+  
+  
