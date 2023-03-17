@@ -10,8 +10,12 @@ import Notice from "./component/Notice";
 import Detail from "./component/Detail";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { Calendar } from "react-calendar";
+import moment from "moment/moment";
 
 function App() {
+  //켈렌더 스테이트
+  let [date,setDate] = useState(new Date());
   //로그인인지 아닌지 체크하는 상태
   let [logincheck, setLogincheck] = useState(false);
   console.log(logincheck);
@@ -21,7 +25,7 @@ function App() {
   let contextuser = useSelector((state) => {
     return state;
   });
-
+  console.log(date)
   useEffect(()=>{
     if(localStorage.getItem('id') != null){
       setLogincheck(true)

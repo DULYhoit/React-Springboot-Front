@@ -1,6 +1,7 @@
 import { Pagination } from 'react-bootstrap';
 
 const Pagination1 = ({total,limit,page,setPage}) => {
+    //페이지개수는 총게시물에서 몇개의 게시물을 보여줄것인가를 나눈페이지이다
     let numpages = Math.ceil(total/limit)
     return ( 
     

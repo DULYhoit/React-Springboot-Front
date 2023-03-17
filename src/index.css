@@ -50,7 +50,14 @@ code {
     margin: 50px auto;
     width: 400px;
   }
-   
+
+.sex-checkbox{
+  text-align: center;
+  width: 200px;
+  
+  
+  background: white;
+}
 
   
   
