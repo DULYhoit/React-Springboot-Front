@@ -18,7 +18,11 @@ function App() {
   let [date,setDate] = useState(new Date());
   //로그인인지 아닌지 체크하는 상태
   let [logincheck, setLogincheck] = useState(false);
-  console.log(logincheck);
+  useEffect(()=>{
+    if(localStorage.getItem('id') != null){
+      setLogincheck(true);
+    }
+  },[logincheck])
 //store에 있는 함수를 쓰기위한 dispatch
   let dispatch = useDispatch();
 //store에 있는 스테이트를 가져오기위한 context

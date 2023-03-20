@@ -25,8 +25,8 @@ const LoginForm = (props) => {
       })
       .then((res) => {
         alert('로그인 되셨습니다.')
-        
         localStorage.setItem('id',res.data)
+        props.setLogincheck('true');
         navigate("/")
       
       })

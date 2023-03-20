@@ -54,10 +54,13 @@ code {
 .sex-checkbox{
   text-align: center;
   width: 200px;
-  
+  height: 50px;
   
   background: white;
 }
-
+.register-submit{
+  text-align: center;
+  
+}
   
   
