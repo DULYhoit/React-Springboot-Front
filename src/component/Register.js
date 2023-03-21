@@ -3,8 +3,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Calendar } from "react-calendar";
 import moment from "moment/moment";
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  //useNavigate
+  let navigate = useNavigate();
+
   //회원가입정보 스테이트
   let [regname, setRegName] = useState("");
   let [regid, setRegid] = useState("");
@@ -44,6 +48,7 @@ const Register = () => {
 
   //생일
   useEffect(()=>{
+    setRegbd(moment(regbd).format('YYYY-MM-DD'))
     setRegAge(now.slice(0,4) - past.slice(0,4));
   },[regbd])
 
@@ -100,6 +105,7 @@ const Register = () => {
   }
   //회원가입
   function register(url,regname,regid,regpw,regemail,regbd,regage,regsex) {
+   
     axios.post(`http://localhost:8080/api${url}`,{
       
         regname: regname,
@@ -112,8 +118,10 @@ const Register = () => {
       
     }).then(res=>{
       console.log(res.data);
+      navigate("/")
     }).catch(()=>{
       console.log('실패함');
+      navigate("/")
     })
   }
   return (
@@ -258,7 +266,7 @@ const Register = () => {
       </InputGroup>
       {count == 1 ? (
         <div>
-          <Calendar onChange={setRegbd} value={regbd} />
+          <Calendar onChange={setRegbd} />
           <div className="text-gray-500 mt-4"></div>
         </div>
       ) : null}
